@@ -4,7 +4,7 @@ PHP, MySQL, Bootstrap 4, JQuery + Ajax, Secure Login System, 100% Responsive, Go
 <ul>
   <li>Php Based Online Diary</li>
   <li>Secure Login / Signup System</li>
-  <li>CRUD opraetions</li>
+  <li>CRUD oprations</li>
   <li>MySql Database</li>
   <li>Ajax Auto Update datebase</li>
   <li>100% responsive</li>
