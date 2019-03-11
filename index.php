@@ -184,11 +184,11 @@
             <form method="post" action="index.php">
         <div class="form-group">
             <label for="InputEmail1">Email address</label>
-            <input type="email" name="email" class="form-control bg-dark text-success" id="InputEmail1" placeholder="Enter email">
+            <input type="email" name="email" class="form-control bg-dark text-success" id="InputEmail1" placeholder="Enter email" required>
         </div>
         <div class="form-group">
             <label for="InputPassword1">Password</label>
-            <input type="password" name="pass" class="form-control bg-dark text-success" id="InputPassword1" placeholder="Password">
+            <input type="password" name="pass" class="form-control bg-dark text-success" id="InputPassword1" placeholder="Password" required>
         </div>
         <div class="form-group form-check">
             <input type="checkbox" class="form-check-input" id="Check1">
@@ -214,16 +214,16 @@
             <form method="post" action="index.php">
             <div class="form-group">
             <label for="InputName">Your Name</label>
-            <input type="text" name="name" class="form-control bg-dark text-success" id="InputEmail1" placeholder="Enter Your Name">
+            <input type="text" name="name" class="form-control bg-dark text-success" id="InputEmail1" placeholder="Enter Your Name" required>
         </div>
         <div class="form-group">
             <label for="InputEmail1">Email address</label>
-            <input type="email" name="email" class="form-control bg-dark text-success" id="InputEmail1" placeholder="Enter email">
+            <input type="email" name="email" class="form-control bg-dark text-success" id="InputEmail1" placeholder="Enter email" required>
             <small id="emailHelp" class="form-text text-success">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
             <label for="InputPassword1">Password</label>
-            <input type="password" name="pass" class="form-control bg-dark text-success" id="InputPassword1" placeholder="Password">
+            <input type="password" name="pass" class="form-control bg-dark text-success" id="InputPassword1" placeholder="Password" required>
         </div>
         <div class="form-group form-check">
             <input type="checkbox" class="form-check-input" id="Check1">
