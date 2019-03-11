@@ -1,5 +1,5 @@
 # 100--Secure-Online-Diary
-PHP, MySQL, Bootstrap 4, JQuery + Ajax, Google Fonts.
+PHP, MySQL, Bootstrap 4, JQuery + Ajax, Secure Login System, 100% Responsive, Google Fonts.
 <p>Demo Here: <a href="https://yashwantlodhi.com/diary" target="_blank"> 100% Secure Online Diary</a></p>
 <ul>
   <li>Php Based Online Diary</li>
