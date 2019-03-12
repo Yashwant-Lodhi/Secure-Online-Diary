@@ -10,7 +10,7 @@
         setcookie("id", "", time() - 60 * 60);
         $_COOKIE['id'] = "";
     }
-    else if ((array_key_exists("id", $_SESSION) AND ($_SESSION['id'])) OR (array_key_exists("id", $_COOKIE) AND ($_COOKIE['id']))) {
+    else if (array_key_exists("id", $_COOKIE) OR (array_key_exists("id", $_SESSION))) {
         header("Location: diary.php");
     }
 
@@ -86,7 +86,7 @@
 
                     $_SESSION['id'] = $id;
                     if ($_POST['keepLoggedIn'] == '1') {
-                        setcookie("id", $id, time() + 60 * 60 * 24 * 365 );
+                        setcookie("id", $id, time() + 60*60*24*365);
                     }
 
                     header("Location: diary.php");
@@ -107,7 +107,7 @@
                   if ($enPass == $row['password']) {
                     $_SESSION['id'] = $row['id'];
                     if ($_POST['keepLoggedIn'] == '1') {
-                        setcookie("id", $row['id'], time() + 60 * 60 * 24 * 365 );
+                        setcookie("id", $row['id'], time() + 60*60*24*365);
                     }
                     header("Location: diary.php");
                   }
@@ -184,15 +184,15 @@
             <form method="post" action="index.php">
         <div class="form-group">
             <label for="InputEmail1">Email address</label>
-            <input type="email" name="email" class="form-control bg-dark text-success" id="InputEmail1" placeholder="Enter email" required>
+            <input type="email" name="email" class="form-control bg-dark text-success" id="InputEmail1" placeholder="Enter email">
         </div>
         <div class="form-group">
             <label for="InputPassword1">Password</label>
-            <input type="password" name="pass" class="form-control bg-dark text-success" id="InputPassword1" placeholder="Password" required>
+            <input type="password" name="pass" class="form-control bg-dark text-success" id="InputPassword1" placeholder="Password">
         </div>
         <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="Check1">
-            <label class="form-check-label" name="keepLoggedIn" value=1 for="Check1">Keep me looged in</label>
+            <input type="checkbox" class="form-check-input" id="Check1" name="keepLoggedIn" value=1>
+            <label class="form-check-label"  for="Check1">Keep me looged in</label>
         </div>
         <input type="hidden" name="signup" value="0">
         <input type="submit" name="submit" class="btn btn-success btn-lg button-1" value="Log In &raquo;">
@@ -214,20 +214,20 @@
             <form method="post" action="index.php">
             <div class="form-group">
             <label for="InputName">Your Name</label>
-            <input type="text" name="name" class="form-control bg-dark text-success" id="InputEmail1" placeholder="Enter Your Name" required>
+            <input type="text" name="name" class="form-control bg-dark text-success" id="InputEmail1" placeholder="Enter Your Name">
         </div>
         <div class="form-group">
             <label for="InputEmail1">Email address</label>
-            <input type="email" name="email" class="form-control bg-dark text-success" id="InputEmail1" placeholder="Enter email" required>
+            <input type="email" name="email" class="form-control bg-dark text-success" id="InputEmail1" placeholder="Enter email">
             <small id="emailHelp" class="form-text text-success">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
             <label for="InputPassword1">Password</label>
-            <input type="password" name="pass" class="form-control bg-dark text-success" id="InputPassword1" placeholder="Password" required>
+            <input type="password" name="pass" class="form-control bg-dark text-success" id="InputPassword1" placeholder="Password">
         </div>
         <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="Check1">
-            <label class="form-check-label" name="keepLoggedIn" value=1 for="Check1">Keep me looged in</label>
+            <input type="checkbox" class="form-check-input" name="keepLoggedIn" value=1 id="Check1">
+            <label class="form-check-label"  for="Check1">Keep me looged in</label>
         </div>
         <input type="hidden" name="signup" value="1">
         <input type="submit" name="submit" class="btn btn-success btn-lg button-1" value="Register &raquo;">
